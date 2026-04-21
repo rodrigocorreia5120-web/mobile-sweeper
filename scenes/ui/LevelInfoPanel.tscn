@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c3ci0rkkci1ra"]
+
+[node name="LevelInfoPanel" type="Node2D"]

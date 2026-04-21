@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjp3dbjqdrsem"]
+
+[ext_resource type="Script" uid="uid://dbkx4vhxxoguh" path="res://scripts/ui/HUD.gd" id="1_kw0id"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_kw0id")
+
+[node name="RevealButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 139.0
+offset_bottom = 55.0
+text = "Reveal"
+
+[node name="FlagButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 24.0
+offset_right = 328.0
+offset_bottom = 55.0
+text = "Flag"
+
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 24.0
+offset_right = 545.0
+offset_bottom = 55.0
+text = "Restart"
+
+[node name="ModeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 96.0
+offset_right = 56.0
+offset_bottom = 119.0
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 200.0
+offset_right = 56.0
+offset_bottom = 223.0
+
+[node name="BombCountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 136.0
+offset_right = 56.0
+offset_bottom = 159.0
+
+[node name="FlagCountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 160.0
+offset_right = 56.0
+offset_bottom = 183.0

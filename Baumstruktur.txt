@@ -1,0 +1,76 @@
+res://
+├── scenes/
+│   ├── main/
+│   │   └── Main.tscn
+│   │
+│   ├── game/
+│   │   ├── Game.tscn
+│   │   ├── Board.tscn
+│   │   ├── HexCell.tscn
+│   │   └── overlays/
+│   │       ├── LosePopup.tscn
+│   │       ├── RevivePopup.tscn
+│   │       ├── WinPopup.tscn
+│   │       └── PausePopup.tscn
+│   │
+│   ├── ui/
+│   │   ├── HUD.tscn
+│   │   ├── TopBar.tscn
+│   │   ├── BottomBar.tscn
+│   │   ├── ProgressBarPanel.tscn
+│   │   └── LevelInfoPanel.tscn
+│   │
+│   └── menus/
+│       ├── TitleScreen.tscn
+│       ├── LevelSelect.tscn
+│       └── SettingsScreen.tscn
+│
+├── scripts/
+│   ├── main/
+│   │   └── Main.gd
+│   │
+│   ├── game/
+│   │   ├── Game.gd
+│   │   ├── Board.gd
+│   │   ├── HexCell.gd
+│   │   ├── BoardGenerator.gd
+│   │   ├── BoardLogic.gd
+│   │   ├── ProgressTracker.gd
+│   │   ├── ReviveSystem.gd
+│   │   └── LevelRules.gd
+│   │
+│   ├── ui/
+│   │   ├── HUD.gd
+│   │   ├── LosePopup.gd
+│   │   ├── RevivePopup.gd
+│   │   └── WinPopup.gd
+│   │
+│   └── managers/
+│       ├── SaveManager.gd
+│       ├── AudioManager.gd
+│       └── SceneRouter.gd
+│
+├── data/
+│   ├── levels/
+│   │   ├── level_01.tres
+│   │   ├── level_02.tres
+│   │   └── level_03.tres
+│   │
+│   └── configs/
+│       ├── game_balance.tres
+│       └── revive_config.tres
+│
+├── assets/
+│   ├── icons/
+│   │   ├── bomb.png
+│   │   ├── flag.png
+│   │   ├── revive.png
+│   │   └── heart.png
+│   │
+│   ├── fonts/
+│   └── audio/
+│
+└── autoload/
+    ├── Global.gd
+    ├── SaveManager.gd
+    └── AudioManager.gd

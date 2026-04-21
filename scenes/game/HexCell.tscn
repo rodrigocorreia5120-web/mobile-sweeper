@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw1b338ghfco0"]
+
+[ext_resource type="Script" uid="uid://dm1tajwhbmr0e" path="res://scripts/game/HexCell.gd" id="1_k0c58"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k0c58"]
+radius = 23.0
+
+[node name="HexCell" type="Node2D"]
+script = ExtResource("1_k0c58")
+
+[node name="Background" type="Polygon2D" parent="."]
+offset = Vector2(-3.9927788, 7.5931244)
+polygon = PackedVector2Array(19.992779, 16.406876, 35.99278, -7.5931244, 19.992779, -31.593124, -12.007221, -31.593124, -28.007221, -7.5931244, -12.007221, 16.406876)
+uv = PackedVector2Array(4.4440317, 23.966427, 32.151382, 8.027671, 31.88718, -24.034298, -14.846325, -30.513638, -20.908113, -18.060745, -23.98806, 7.975265)
+
+[node name="Border" type="Line2D" parent="."]
+points = PackedVector2Array(16, 24, 32, 0, 16, -24, -16, -24, -32, 0, -16, 24, 16, 24, 32, 0)
+width = 2.0
+default_color = Color(0.078431375, 0.14901961, 0.22745098, 1)
+
+[node name="NumberLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -115.0
+offset_right = 201.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.30980393, 0.77254903, 0.34901962, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="FlagLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -115.0
+offset_right = 201.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.6784314, 0.2, 0.24705882, 1)
+text = "F"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="BombLabel" type="Label" parent="."]
+offset_left = -199.0
+offset_top = -115.0
+offset_right = 201.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0.4862745, 0.38039216, 0.5803922, 1)
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ClickArea" type="Area2D" parent="."]
+position = Vector2(-4, 7)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea"]
+position = Vector2(4, -7)
+shape = SubResource("CircleShape2D_k0c58")

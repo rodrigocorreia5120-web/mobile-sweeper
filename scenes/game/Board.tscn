@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vneq6n28inl0"]
+
+[ext_resource type="Script" uid="uid://beco86old72v" path="res://scripts/game/Board.gd" id="1_p7ba4"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_p7ba4")
+
+[node name="CellsContainer" type="Node2D" parent="."]

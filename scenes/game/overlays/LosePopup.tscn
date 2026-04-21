@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ctiqndjh0iom6"]
+
+[node name="LosePopup" type="Node2D"]

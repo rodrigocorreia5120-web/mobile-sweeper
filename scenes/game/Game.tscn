@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://66ru5m0p6a4"]
+
+[ext_resource type="PackedScene" uid="uid://vneq6n28inl0" path="res://scenes/game/Board.tscn" id="1_klkup"]
+[ext_resource type="Script" uid="uid://blv334robyf7m" path="res://scripts/game/Game.gd" id="1_vrspl"]
+[ext_resource type="Shader" uid="uid://qjl3s6md84r5" path="res://scenes/game/Shader_Basecolor.gdshader" id="2_7qcb4"]
+[ext_resource type="PackedScene" uid="uid://bjp3dbjqdrsem" path="res://scenes/ui/HUD.tscn" id="2_m44fu"]
+[ext_resource type="Shader" uid="uid://q62ith6c8wkm" path="res://scenes/game/Starfield.gdshader" id="3_lyhax"]
+[ext_resource type="Shader" uid="uid://rswilh24uu0v" path="res://scenes/game/BeamGlow.gdshader" id="4_365ku"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lyhax"]
+shader = ExtResource("2_7qcb4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_365ku"]
+shader = ExtResource("3_lyhax")
+shader_parameter/scroll_speed = 0.015
+shader_parameter/star_density = 110.0
+shader_parameter/star_brightness = 0.22
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gg4pt"]
+shader = ExtResource("4_365ku")
+shader_parameter/drift_speed = 0.01
+shader_parameter/beam_width = 0.34
+shader_parameter/glow_strength = 0.42
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_vrspl")
+
+[node name="Background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BaseColor" type="ColorRect" parent="Background"]
+material = SubResource("ShaderMaterial_lyhax")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.6901961, 0.011764706, 0.03137255, 1)
+
+[node name="Starfield" type="ColorRect" parent="Background"]
+material = SubResource("ShaderMaterial_365ku")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BeamGlow" type="ColorRect" parent="Background"]
+material = SubResource("ShaderMaterial_gg4pt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Board" parent="." instance=ExtResource("1_klkup")]
+
+[node name="HUD" parent="." instance=ExtResource("2_m44fu")]
